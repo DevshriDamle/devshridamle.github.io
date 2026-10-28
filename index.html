@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Devshri Damle: AI & Data Science engineer building production-ready machine learning systems.">
+<meta property="og:title" content="Devshri Damle · AI & Data Science Engineer">
+<meta property="og:description" content="Projects, skills and experience in machine learning, NLP and computer vision.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%A0%3C/text%3E%3C/svg%3E">
+<title>Devshri Damle · AI & Data Science Engineer</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.263.1/dist/umd/lucide.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d1117;--panel:rgba(255,255,255,.04);--line:rgba(255,255,255,.1);--txt:#e6edf3;--mute:#8b98a9;--cy:#22d3ee;--vi:#a78bfa;--em:#34d399;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--txt);font-family:'Space Grotesk',system-ui,sans-serif;margin:0;overflow-x:hidden}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.glass{background:var(--panel);border:1px solid var(--line);backdrop-filter:blur(12px);border-radius:16px;transition:border-color .25s,box-shadow .25s}
+.glass:hover{border-color:rgba(34,211,238,.45);box-shadow:0 0 30px -8px rgba(34,211,238,.35)}
+.grad{background:linear-gradient(90deg,var(--cy),var(--vi),var(--em));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% auto;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:200% center}}
+.tag{font-family:'JetBrains Mono',monospace;font-size:.72rem;padding:.2rem .55rem;border-radius:999px;border:1px solid var(--line);color:var(--mute);transition:.2s}
+.tag:hover{color:var(--cy);border-color:var(--cy)}
+.btn{display:inline-flex;gap:.5rem;align-items:center;padding:.75rem 1.4rem;border-radius:12px;font-weight:500;transition:.25s;cursor:pointer}
+.btn-p{background:linear-gradient(90deg,var(--cy),var(--vi));color:#06090d}
+.btn-p:hover{box-shadow:0 0 28px rgba(34,211,238,.5)}
+.btn-g{border:1px solid var(--line)}.btn-g:hover{border-color:var(--cy);color:var(--cy)}
+.chip{padding:.4rem 1rem;border-radius:999px;border:1px solid var(--line);color:var(--mute);font-size:.85rem;cursor:pointer;transition:.2s}
+.chip.on,.chip:hover{color:var(--cy);border-color:var(--cy);background:rgba(34,211,238,.08)}
+.tl{border-left:1px solid var(--line);margin-left:.5rem}
+.tl>div{position:relative;padding-left:1.5rem;padding-bottom:1.75rem}
+.tl>div::before{content:"";position:absolute;left:-5px;top:.45rem;width:9px;height:9px;border-radius:50%;background:var(--cy);box-shadow:0 0 12px var(--cy)}
+.tl>div.v::before{background:var(--vi);box-shadow:0 0 12px var(--vi)}
+.rv{opacity:1}
+input,textarea{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:10px;padding:.7rem .9rem;width:100%;color:var(--txt);outline:none}
+input:focus,textarea:focus,a:focus-visible,button:focus-visible{outline:2px solid var(--cy);outline-offset:2px}
+#term-out{height:230px;overflow-y:auto}
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-area-inset-top,0px);background:rgba(13,17,23,.75);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<!-- NAV -->
+<header class="nav"><div class="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between">
+  <a href="#top" class="mono text-sm text-cyan-300">devshri<span class="text-slate-500">.ai</span></a>
+  <nav class="hidden md:flex gap-6 text-sm text-slate-300">
+    <a href="#skills" class="hover:text-cyan-300">Skills</a><a href="#projects" class="hover:text-cyan-300">Projects</a>
+    <a href="#journey" class="hover:text-cyan-300">Journey</a><a href="#terminal" class="hover:text-cyan-300">Terminal</a><a href="#contact" class="hover:text-cyan-300">Contact</a>
+  </nav>
+</div></header>
+
+<!-- HERO -->
+<section id="top" class="relative min-h-screen flex items-center overflow-hidden">
+  <canvas id="mesh" class="absolute inset-0 w-full h-full"></canvas>
+  <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full" style="background:radial-gradient(circle,rgba(167,139,250,.25),transparent 70%)"></div>
+  <div class="relative max-w-6xl mx-auto px-5 pt-24 pb-16">
+    <p class="mono text-sm text-emerald-300 mb-4">Final-year B.Tech · AI & Data Science · Satara, India</p>
+    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight">Devshri Damle<br>builds <span class="grad" id="typed">AI that ships</span><span class="text-cyan-300 animate-pulse">|</span></h1>
+    <p class="mt-6 max-w-xl text-slate-300 text-lg">I take machine learning from raw data to production inference: models, APIs, dashboards, and tests. Open to AI Engineer, ML Engineer, Data Scientist and Data Analyst roles across India.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#projects" class="btn btn-p"><i data-lucide="layers" class="w-4 h-4"></i>View projects</a>
+      <a href="#contact" class="btn btn-g"><i data-lucide="mail" class="w-4 h-4"></i>Contact me</a>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section class="max-w-6xl mx-auto px-5 py-12">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="metrics"></div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="max-w-6xl mx-auto px-5 py-16 rv">
+  <h2 class="text-3xl font-bold mb-2">Skill matrix</h2>
+  <p class="text-slate-400 mb-8">Click a category to see how I use it. Tags in cyan are the tools I reach for first.</p>
+  <div class="flex flex-wrap gap-2 mb-6" id="skill-tabs"></div>
+  <div class="glass p-6"><p id="skill-note" class="text-slate-300 mb-4"></p><div id="skill-tags" class="flex flex-wrap gap-2"></div></div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="max-w-6xl mx-auto px-5 py-16 rv">
+  <h2 class="text-3xl font-bold mb-2">Featured projects</h2>
+  <p class="text-slate-400 mb-6">Seven builds, from model to deployment.</p>
+  <div class="flex flex-wrap gap-2 mb-8" id="filters"></div>
+  <div class="grid md:grid-cols-2 gap-5" id="cards"></div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="max-w-6xl mx-auto px-5 py-16 rv">
+  <h2 class="text-3xl font-bold mb-8">Experience, education and recognition</h2>
+  <div class="grid md:grid-cols-2 gap-10">
+    <div><h3 class="mono text-cyan-300 mb-4 text-sm">Experience</h3><div class="tl">
+      <div><p class="mono text-xs text-slate-500">2025</p><p class="font-medium">Python Full Stack Development Intern · Eduskill</p><p class="text-slate-400 text-sm">Built and deployed web applications that connect Python backends to REST APIs.</p></div>
+      <div class="v"><p class="mono text-xs text-slate-500">2024</p><p class="font-medium">Cloud Computing Intern · Edunet</p><p class="text-slate-400 text-sm">Developed disease-prediction models and business analytics pipelines on IBM Watson Studio AutoAI.</p></div>
+      <div><p class="mono text-xs text-slate-500">2024</p><p class="font-medium">Artificial Intelligence Intern · Eisystems</p><p class="text-slate-400 text-sm">Designed and evaluated ML models across several real-world application domains.</p></div>
+    </div>
+    <h3 class="mono text-cyan-300 mb-4 mt-4 text-sm">Publication</h3>
+    <div class="glass p-4 text-sm text-slate-300">Comparative Analysis of IBM Watson Studio and Python for Business Data Analytics. Peer-reviewed and approved for a UGC-Care journal; revised and now queued for publication on a higher-impact platform.</div></div>
+    <div><h3 class="mono text-violet-300 mb-4 text-sm">Education</h3><div class="tl">
+      <div class="v"><p class="mono text-xs text-slate-500">2023 – 2027</p><p class="font-medium">B.Tech, AI & Data Science · Yashoda Technical Campus, Satara</p><p class="text-slate-400 text-sm">CGPA 8.67. Affiliated with Dr. Babasaheb Ambedkar Technological University.</p></div>
+      <div><p class="mono text-xs text-slate-500">2023</p><p class="font-medium">HSC · Yashwantrao Chavhan Institute of Science</p><p class="text-slate-400 text-sm">82.83%</p></div>
+      <div class="v"><p class="mono text-xs text-slate-500">2021</p><p class="font-medium">SSC · MKSSS’s Kanya Shala</p><p class="text-slate-400 text-sm">97.00%</p></div>
+    </div>
+    <h3 class="mono text-violet-300 mb-4 mt-4 text-sm">Recognition</h3>
+    <ul class="text-sm text-slate-300 space-y-2" id="ach"></ul></div>
+  </div>
+</section>
+
+<!-- TERMINAL -->
+<section id="terminal" class="max-w-3xl mx-auto px-5 py-16 rv">
+  <h2 class="text-3xl font-bold mb-2">Ask the terminal</h2>
+  <p class="text-slate-400 mb-6">Type <span class="mono text-cyan-300">help</span> to see what it knows.</p>
+  <div class="glass p-4 mono text-sm" onclick="document.getElementById('term-in').focus()">
+    <div id="term-out" class="mb-3 text-slate-300"></div>
+    <div class="flex gap-2 items-center"><span class="text-emerald-300">guest@devshri:~$</span><input id="term-in" autocomplete="off" aria-label="Terminal command" style="border:0;background:transparent;padding:0"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="max-w-4xl mx-auto px-5 py-16 rv">
+  <h2 class="text-3xl font-bold mb-2">Let’s talk</h2>
+  <p class="text-slate-400 mb-8">Hiring for an AI or data role? Send a note and I’ll reply by email.</p>
+  <div class="grid md:grid-cols-2 gap-6">
+    <form class="glass p-6 space-y-3" id="cf">
+      <input id="cn" placeholder="Your name" required aria-label="Your name">
+      <input id="ce" type="email" placeholder="Your email" required aria-label="Your email">
+      <textarea id="cm" rows="4" placeholder="What would you like to build?" required aria-label="Message"></textarea>
+      <button class="btn btn-p w-full justify-center" type="submit"><i data-lucide="send" class="w-4 h-4"></i>Send message</button>
+      <p class="text-xs text-slate-500">This opens your email app with the message filled in.</p>
+    </form>
+    <div class="space-y-3">
+      <a class="glass p-4 flex items-center gap-3" href="mailto:devshridamle@gmail.com"><i data-lucide="mail" class="w-5 h-5 text-cyan-300"></i>devshridamle@gmail.com</a>
+      <a class="glass p-4 flex items-center gap-3" href="https://github.com/DevshriDamle" target="_blank" rel="noopener"><i data-lucide="github" class="w-5 h-5 text-cyan-300"></i>github.com/DevshriDamle</a>
+      <a class="glass p-4 flex items-center gap-3" href="https://www.linkedin.com/in/devshri-damle-3aa9082b9" target="_blank" rel="noopener"><i data-lucide="linkedin" class="w-5 h-5 text-cyan-300"></i>LinkedIn</a>
+      <a class="glass p-4 flex items-center gap-3" href="https://www.kaggle.com/devshridamle" target="_blank" rel="noopener"><i data-lucide="bar-chart-3" class="w-5 h-5 text-cyan-300"></i>Kaggle</a>
+      <a class="btn btn-g w-full justify-center" href="resume.pdf" download><i data-lucide="download" class="w-4 h-4"></i>Download resume</a>
+    </div>
+  </div>
+</section>
+<footer class="text-center text-slate-500 text-sm py-8 border-t border-white/10">© 2026 Devshri Damle · Satara, Maharashtra</footer>
+
+<script>
+/* ---------- DATA (edit here) ---------- */
+const metrics=[[89.1,'%','VocalWings accuracy (±4.5%)',1],[8.67,'','CGPA, B.Tech AI & DS',2],[7,'','Projects built end to end',0],[165,'','End-to-end checks on CRUX',0]];
+const skills={
+ 'Machine Learning':['Scikit-learn','XGBoost','Random Forest','Logistic Regression','Hyperparameter tuning','Threshold optimization','SHAP','Fairness audit','K-Means / RFM'],
+ 'Deep Learning':['TensorFlow','Keras','CNN','MobileNetV2','Focal loss','Spectrograms','Embeddings + HNSW'],
+ 'Data Science & Analytics':['EDA','Statistical testing','Feature engineering','Data validation','Customer segmentation','SQL analysis','Pandas','NumPy'],
+ 'Frameworks & Tools':['FastAPI','Flask','Streamlit','React','Next.js','Docker','Git','GitHub','IBM Watson AutoAI','PostgreSQL + pgvector','MySQL','MongoDB','Firebase','pytest'],
+ 'Languages':['Python','SQL','R','TypeScript','JavaScript']};
+const notes={'Machine Learning':'Imbalanced classification, careful validation and explainability, shown in the attrition system.','Deep Learning':'Audio and image models, from mel-spectrograms to transfer learning.','Data Science & Analytics':'Cleaning to statistical tests to insights a business user can act on.','Frameworks & Tools':'Serving models behind APIs and dashboards, then packaging them in Docker.','Languages':'Python first, with SQL and R for analysis, TypeScript for full-stack work.'};
+const projects=[
+ {t:'CRUX · Problem-First Collaboration Platform',g:'https://github.com/DevshriDamle/CRUX',l:'https://crux-delta-blush.vercel.app/',c:['Full-Stack AI','NLP'],p:'Matching people to problems worth solving, with recommendations that explain themselves.',s:['Next.js','TypeScript','FastAPI','PostgreSQL','pgvector','Docker','JWT'],a:'384-dimensional embeddings with HNSW cosine similarity drive the matching engine. JWT/OAuth and role-based authorization secure it; 102 backend tests, 165 end-to-end checks and 108 API endpoints are validated.'},
+ {t:'GD Analyzer · Group Discussion Analysis',g:'https://github.com/DevshriDamle/GD-Analyzer',c:['NLP'],p:'Scoring each speaker in a group discussion without manual review.',s:['Python','Streamlit','Faster-Whisper','Pyannote','Gemini API','ReportLab'],a:'Transcription and speaker diarization, with word-level timestamp matching for better speaker attribution. Gemini scores each speaker, and ReportLab exports PDF reports.'},
+ {t:'VocalWings · Bird Species Identification',g:'https://github.com/DevshriDamle/VocalWings',c:['Computer Vision','NLP'],p:'Identifying Indian bird species from their calls.',s:['TensorFlow','Keras','Librosa','Flask','MySQL','GPS GeoMapping'],a:'CNN on mel-spectrograms with 4-second windows and probability aggregation reaches 89.1% ± 4.5%. An unknown-class detector and confidence threshold block unreliable predictions; GPS heatmaps map sightings.'},
+ {t:'Employee Attrition Prediction System',g:'https://github.com/DevshriDamle/Employee-Attrition-Prediction-System',c:['Predictive Analytics','Full-Stack AI'],p:'Flagging employees at elevated attrition risk so HR can act early.',s:['scikit-learn','XGBoost','SHAP','FastAPI','Streamlit','Docker','pytest'],a:'Leak-free ColumnTransformer pipeline, six models compared, RandomizedSearchCV, tuned decision threshold, SHAP explanations and a fairness audit. Served by a FastAPI API and Streamlit dashboard with 22 tests.'},
+ {t:'Retail Sales Intelligence Dashboard',g:'https://github.com/DevshriDamle/Retail-Sales-Intelligence',c:['Predictive Analytics'],p:'Turning any retail sales export into clean data and traceable insights.',s:['Python','Streamlit','K-Means','SQLite','SciPy','Docker'],a:'Fuzzy column matching works across differently structured files. Non-destructive cleaning, RFM segmentation, hypothesis tests with plain-English readouts, a SQL tab and a PDF report.'},
+ {t:'InvisiMark · Skin Cancer Detection',g:'https://github.com/DevshriDamle/InvisiMark',c:['Computer Vision'],p:'Early screening support for malignant versus benign skin lesions.',s:['MobileNetV2','Focal loss','TensorFlow','Flask','OpenCV'],a:'MobileNetV2 trained on ISIC 2016/2017 with focal loss for class imbalance. Flask serves real-time predictions, with symptom checker, roadmap and doctor directory tools.'},
+ {t:'ShivaSpear · Deepfake Detection',g:'https://github.com/DevshriDamle/ShivaSpear_Deepfake',c:['Computer Vision','NLP'],p:'Detecting manipulated images, cloned audio and fake news in one tool.',s:['TensorFlow','OpenCV','Librosa','NLTK','spaCy','Streamlit'],a:'CNN pipelines for images and MFCC/spectrogram audio features, plus a TF-IDF logistic regression news classifier, all deployed in Streamlit.'}];
+const ach=['Hackathon finalist: IQOO National Hackathon 2026–27','Hackathon finalist: PVG COET Innoverse 2024–25','Zonal finalist: Avishkar Research Competition','District topper: Dr. Babasaheb Ambedkar Technological University','Technical Head, Dept. of AI & DS','Winner: Institutional Chess Competition','Student Reporter: Sakal YIN'];
+const T={
+ help:'Commands: about, skills, projects, education, achievements, contact, clear',
+ about:'Devshri Damle: final-year AI & Data Science student building production-minded ML systems. CGPA 8.67.',
+ skills:'Python, SQL, R, TensorFlow, scikit-learn, FastAPI, Flask, Streamlit, React, Docker, PostgreSQL + pgvector, SHAP.',
+ projects:'CRUX, GD Analyzer, VocalWings, Employee Attrition, Retail Sales Dashboard, InvisiMark, ShivaSpear. See the projects section above.',
+ education:'B.Tech AI & DS, Yashoda Technical Campus (2023–2027), CGPA 8.67.',
+ achievements:ach.slice(0,4).join(' | '),
+ contact:'devshridamle@gmail.com | github.com/DevshriDamle | LinkedIn: devshri-damle-3aa9082b9'};
+
+/* ---------- Typing effect ---------- */
+const words=['AI that ships','models to production','data into decisions'];let wi=0,ci=0,del=false;
+(function type(){const w=words[wi],el=document.getElementById('typed');
+ el.textContent=w.slice(0,ci);
+ if(!del&&ci<w.length){ci++;setTimeout(type,70)}else if(!del){del=true;setTimeout(type,1400)}
+ else if(ci>0){ci--;setTimeout(type,35)}else{del=false;wi=(wi+1)%words.length;setTimeout(type,300)}})();
+
+/* ---------- Hero mesh ---------- */
+(function(){const cv=document.getElementById('mesh'),x=cv.getContext('2d');let W,H,P=[];const m={x:-999,y:-999};
+ function size(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;P=Array.from({length:Math.min(80,W/14|0)},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35}))}
+ size();addEventListener('resize',size);cv.parentElement.addEventListener('mousemove',e=>{const r=cv.getBoundingClientRect();m.x=e.clientX-r.left;m.y=e.clientY-r.top});
+ (function draw(){x.clearRect(0,0,W,H);
+  P.forEach((p,i)=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+   x.fillStyle='rgba(34,211,238,.8)';x.beginPath();x.arc(p.x,p.y,1.6,0,7);x.fill();
+   for(let j=i+1;j<P.length;j++){const q=P[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<120){x.strokeStyle=`rgba(167,139,250,${.28*(1-d/120)})`;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}
+   const dm=Math.hypot(p.x-m.x,p.y-m.y);if(dm<150){x.strokeStyle=`rgba(52,211,153,${.6*(1-dm/150)})`;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(m.x,m.y);x.stroke()}});
+  requestAnimationFrame(draw)})()})();
+
+/* ---------- Metrics ---------- */
+const mw=document.getElementById('metrics');
+metrics.forEach(([v,u,l,d])=>{mw.insertAdjacentHTML('beforeend',`<div class="glass p-5"><div class="text-3xl sm:text-4xl font-bold grad mono"><span data-v="${v}" data-d="${d}">${v.toFixed(d)}</span>${u}</div><p class="text-slate-400 text-sm mt-1">${l}</p></div>`)});
+const mo=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;mo.unobserve(e.target);
+ e.target.querySelectorAll('[data-v]').forEach(s=>{const v=+s.dataset.v,d=+s.dataset.d,t0=performance.now();
+  (function f(t){const k=Math.min(1,(t-t0)/1400);s.textContent=(v*(1-Math.pow(1-k,3))).toFixed(d);if(k<1)requestAnimationFrame(f)})(t0)})}),{threshold:.4});
+mo.observe(mw);
+
+/* ---------- Skills ---------- */
+const st=document.getElementById('skill-tabs');
+function showSkill(k){[...st.children].forEach(b=>b.classList.toggle('on',b.textContent===k));
+ document.getElementById('skill-note').textContent=notes[k];
+ document.getElementById('skill-tags').innerHTML=skills[k].map((s,i)=>`<span class="tag" style="${i<3?'color:var(--cy);border-color:rgba(34,211,238,.4)':''}">${s}</span>`).join('')}
+Object.keys(skills).forEach(k=>{const b=document.createElement('button');b.className='chip';b.textContent=k;b.onclick=()=>showSkill(k);st.appendChild(b)});
+showSkill('Machine Learning');
+
+/* ---------- Projects + filters ---------- */
+const cats=['All',...new Set(projects.flatMap(p=>p.c))],fw=document.getElementById('filters'),cw=document.getElementById('cards');
+function render(f){cw.innerHTML=projects.filter(p=>f==='All'||p.c.includes(f)).map(p=>`<article class="glass p-6 flex flex-col">
+ <div class="flex flex-wrap gap-2 mb-3">${p.c.map(c=>`<span class="mono text-xs text-violet-300">${c}</span>`).join('')}</div>
+ <h3 class="text-xl font-bold">${p.t}</h3>
+ <p class="text-slate-300 mt-2">${p.p}</p>
+ <p class="text-slate-400 text-sm mt-3"><span class="text-cyan-300">Approach:</span> ${p.a}</p>
+ <div class="flex flex-wrap gap-2 mt-4">${p.s.map(s=>`<span class="tag">${s}</span>`).join('')}</div>
+ <div class="mt-5 pt-4 border-t border-white/10 flex gap-4 text-sm">
+  <a href="${p.g}" target="_blank" rel="noopener" class="hover:text-cyan-300 flex gap-1 items-center"><i data-lucide="github" class="w-4 h-4"></i>GitHub</a>
+  ${p.l?`<a href="${p.l}" target="_blank" rel="noopener" class="hover:text-cyan-300 flex gap-1 items-center"><i data-lucide="external-link" class="w-4 h-4"></i>Live demo</a>`:''}</div></article>`).join('');
+ [...fw.children].forEach(b=>b.classList.toggle('on',b.textContent===f));window.lucide&&lucide.createIcons()}
+cats.forEach(c=>{const b=document.createElement('button');b.className='chip';b.textContent=c;b.onclick=()=>render(c);fw.appendChild(b)});
+render('All');
+document.getElementById('ach').innerHTML=ach.map(a=>`<li class="flex gap-2"><span class="text-emerald-300">▸</span>${a}</li>`).join('');
+
+/* ---------- Terminal ---------- */
+const out=document.getElementById('term-out'),inp=document.getElementById('term-in');
+const say=(t,c='')=>{out.insertAdjacentHTML('beforeend',`<div class="${c} mb-1"></div>`);out.lastChild.textContent=t;out.scrollTop=out.scrollHeight};
+say('Welcome. Type "help" to begin.','text-slate-500');
+inp.addEventListener('keydown',e=>{if(e.key!=='Enter')return;const c=inp.value.trim().toLowerCase();inp.value='';if(!c)return;say('$ '+c,'text-emerald-300');
+ if(c==='clear')out.innerHTML='';else say(T[c]||`Unknown command "${c}". Type help.`)});
+
+/* ---------- Contact (opens mail client) ---------- */
+document.getElementById('cf').addEventListener('submit',e=>{e.preventDefault();
+ const n=document.getElementById('cn').value,m=document.getElementById('cm').value,em=document.getElementById('ce').value;
+ location.href=`mailto:devshridamle@gmail.com?subject=${encodeURIComponent('Portfolio message from '+n)}&body=${encodeURIComponent(m+'\n\nReply to: '+em)}`});
+
+/* ---------- Scroll reveal (page load sections only) ---------- */
+window.lucide&&lucide.createIcons();
+</script>
+</body>
+</html>
